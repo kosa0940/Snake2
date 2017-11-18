@@ -15,7 +15,9 @@ public class ScreenSettings {
     public static double ratio = (double)screenWidth/screenHeight;
 
     //Display mode
-    public static DisplayMode displayMode = new DisplayMode(800,600,16,DisplayMode.REFRESH_RATE_UNKNOWN);
+    public static DisplayMode displayMode = new DisplayMode(screenWidth,screenHeight,16,DisplayMode.REFRESH_RATE_UNKNOWN);
+
+
 
     public static void main(String[] args){
         System.out.println(screenHeight);

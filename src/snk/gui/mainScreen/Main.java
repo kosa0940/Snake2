@@ -15,8 +15,9 @@ public class Main extends JFrame{
 
         //Look Setting
         setLayout(null);
-        setBounds(0,0, ScreenSettings.screenWidth,ScreenSettings.screenHeight);
         setUndecorated(true);
+
+        ScreenSettings.device.setFullScreenWindow(this);
 
         setVisible(true);
 

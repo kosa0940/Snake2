@@ -12,12 +12,12 @@ public class GameField extends JPanel{
     private static Color backgroundColor = new Color(23, 156, 29);
 
     //panel bounds
-    private static int gameFieldWidth= ScreenSettings.elementWidth*14;
-    private static int gameFieldHeight=ScreenSettings.elementHeight*7;
+    private static int gameFieldWidth= ScreenSettings.elementWidth*13;
+    private static int gameFieldHeight=ScreenSettings.elementHeight*8;
 
     //draw starting position
     private static int panelX=0;
-    private static int panelY=ScreenSettings.elementHeight;
+    private static int panelY=ScreenSettings.elementHeight/2;
 
     //Objects
     SnakePart snakePart = new SnakePart();
@@ -27,7 +27,7 @@ public class GameField extends JPanel{
         setLayout(null);
         setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight);
 
-        snakePart.setBounds(0,0,100,100);
+        snakePart.setBounds(0,0,gameFieldWidth,gameFieldHeight);
 
         add(snakePart);
 
@@ -38,7 +38,7 @@ public class GameField extends JPanel{
         Graphics2D g2 = (Graphics2D) g;
 
         g2.setColor(backgroundColor);
-        g2.fillRect(0,0,ScreenSettings.elementWidth,ScreenSettings.screenHeight);
+        g2.fillRect(0,0,gameFieldWidth,gameFieldHeight);
 
         g2.setColor(Color.black);
 

@@ -21,7 +21,6 @@ public class Main extends JFrame{
 
         ScreenSettings.device.setFullScreenWindow(this);
 
-        gameField.setBounds(0,0,1000,1000);
         add(gameField);
 
         setVisible(true);

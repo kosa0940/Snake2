@@ -8,6 +8,8 @@ import javax.swing.*;
 
 public class Main extends JFrame{
 
+    private GameField gameField = new GameField();
+
     public Main(){
 
         super("Snake Paweł Kośnica (unplayable)");
@@ -18,6 +20,9 @@ public class Main extends JFrame{
         setUndecorated(true);
 
         ScreenSettings.device.setFullScreenWindow(this);
+
+        gameField.setBounds(0,0,1000,1000);
+        add(gameField);
 
         setVisible(true);
 

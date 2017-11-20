@@ -7,11 +7,16 @@ import java.awt.*;
 
 public class SidePanel extends JPanel{
 
+    //Buttons look
+    private Font buttonFont = new Font("Dialog",0,24);
 
-    Font buttonFont = new Font("Dialog",0,24);
+    //Arrows location (2x3 elemnt)
+    public static int xlocation =0;
+    public static int yLocation=5*ScreenSettings.elementHeight;
 
     //Components Declaration
     JButton start,recTab,exit;
+    ControlArrows arrows = new ControlArrows();
 
     //Components Localization
     private static int separation = ScreenSettings.elementHeight/2;
@@ -50,6 +55,7 @@ public class SidePanel extends JPanel{
         add(start);
         add(exit);
         add(recTab);
+        add(arrows);
     }
 
 }

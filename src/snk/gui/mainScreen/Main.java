@@ -23,8 +23,8 @@ public class Main extends JFrame{
 
         ScreenSettings.device.setFullScreenWindow(this);
 
-        add(gameField);
         add(sidePanel);
+        add(gameField);
 
         setVisible(true);
 

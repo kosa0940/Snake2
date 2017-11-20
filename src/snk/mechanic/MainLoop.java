@@ -20,7 +20,7 @@ public class MainLoop {
         while(gameRunning==true){
 
             mainScreen.gameField.snakePart.snakeX=mainScreen.gameField.snakePart.snakeX+ ScreenSettings.elementWidth/2;
-            mainScreen.gameField.repaint();
+            mainScreen.repaint();
             System.out.println(mainScreen.gameField.snakePart.snakeX);
             try {
                 Thread.sleep(500);

@@ -12,8 +12,8 @@ public class GameField extends JPanel{
     private static Color backgroundColor = new Color(0, 9, 87);
 
     //panel bounds
-    private static int gameFieldWidth= ScreenSettings.elementWidth*13;
-    private static int gameFieldHeight=ScreenSettings.elementHeight*8;
+    public static int gameFieldWidth= ScreenSettings.elementWidth*13;
+    public static int gameFieldHeight=ScreenSettings.elementHeight*8;
 
     //Location
     private static int panelX=0;

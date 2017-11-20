@@ -1,6 +1,7 @@
 package snk.gui.sideBar;
 
 import snk.gui.ScreenSettings;
+import snk.gui.mainScreen.GameField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,14 +23,14 @@ public class SidePanel extends JPanel implements ActionListener{
 
     //Components Localization
     private static int separation = ScreenSettings.elementHeight/2;
-    private static int buttonWidth = ScreenSettings.elementHeight*3;
+    private static int buttonWidth = ScreenSettings.screenWidth- GameField.gameFieldWidth+16;
     private static int buttonHeight = ScreenSettings.elementHeight;
 
     //Panel Location
-    private static int panelX=ScreenSettings.elementWidth*13;
+    private static int panelX=ScreenSettings.elementWidth*13-16;
     private static int panelY=0;
-    private static int panelWidth=ScreenSettings.elementWidth*3;
-    private static int panelHeight=ScreenSettings.elementHeight*9;
+    private static int panelWidth =ScreenSettings.screenWidth- GameField.gameFieldWidth+16;
+    private static int panelHeight=ScreenSettings.screenHeight;
 
     public SidePanel(){
 

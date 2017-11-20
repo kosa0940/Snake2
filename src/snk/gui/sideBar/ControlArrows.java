@@ -14,7 +14,7 @@ public class ControlArrows extends JPanel{
     public ControlArrows(){
 
         setBackground(Color.black);
-        setBounds(SidePanel.xlocation,SidePanel.yLocation, ScreenSettings.elementHeight*3,ScreenSettings.elementWidth*2);
+        setBounds(SidePanel.xlocation+10,SidePanel.yLocation, ScreenSettings.elementHeight*3,ScreenSettings.elementWidth*2);
         setLayout(null);
 
         //Buttons inicjalization

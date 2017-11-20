@@ -20,14 +20,12 @@ public class GameField extends JPanel{
     private static int panelY=ScreenSettings.elementHeight/2;
 
     //Panels and components
-    SnakePart snakePart = new SnakePart();
+    public SnakePart snakePart = new SnakePart();
 
     public GameField(){
 
         setLayout(null);
         setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight);
-
-        snakePart.setBounds(0,0,gameFieldWidth,gameFieldHeight);
 
         add(snakePart);
 

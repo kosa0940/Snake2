@@ -9,7 +9,7 @@ import java.awt.*;
 public class GameField extends JPanel{
 
     //Panel look
-    private static Color backgroundColor = new Color(23, 156, 29);
+    private static Color backgroundColor = new Color(0, 9, 87);
 
     //panel bounds
     private static int gameFieldWidth= ScreenSettings.elementWidth*13;

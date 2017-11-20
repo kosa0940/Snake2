@@ -10,6 +10,8 @@ public class SnakePart extends JPanel{
     public int snakeX=0;
     public int snakeY=0;
 
+    private static Color snakeColor = new Color(149, 11, 0);
+
     public SnakePart(){
 
         setLayout(null);
@@ -21,7 +23,7 @@ public class SnakePart extends JPanel{
     public void paint(Graphics g){
 
         Graphics2D g2 = (Graphics2D)g;
-        g2.setColor(Color.black);
+        g2.setColor(snakeColor);
         g2.fillRect(0,0, ScreenSettings.elementWidth/2,ScreenSettings.elementHeight/2);
 
     }

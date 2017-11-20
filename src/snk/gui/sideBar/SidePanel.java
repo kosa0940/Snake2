@@ -4,8 +4,10 @@ import snk.gui.ScreenSettings;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class SidePanel extends JPanel{
+public class SidePanel extends JPanel implements ActionListener{
 
     //Buttons look
     private Font buttonFont = new Font("Dialog",0,24);
@@ -51,11 +53,23 @@ public class SidePanel extends JPanel{
         recTab.setBounds(0,separation*4,buttonWidth,buttonHeight);
         exit.setBounds(0,separation*7,buttonWidth,buttonHeight);
 
+        //ActionListeners
+        exit.addActionListener(this);
+
         //Panel build
         add(start);
         add(exit);
         add(recTab);
         add(arrows);
     }
+
+        public void actionPerformed(ActionEvent evt){
+
+            Object source = evt.getSource();
+            if(source==exit){
+                System.exit(0);
+            }
+
+        }
 
 }

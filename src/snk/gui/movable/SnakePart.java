@@ -10,7 +10,7 @@ public class SnakePart extends JPanel{
     public int snakeX=0;
     public int snakeY=0;
 
-    private static Color snakeColor = new Color(149, 11, 0);
+    private static Color snakeColor = new Color(11, 189, 0);
 
     public SnakePart(){
 

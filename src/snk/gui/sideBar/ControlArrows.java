@@ -4,13 +4,14 @@ import snk.gui.ScreenSettings;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class ControlArrows extends JPanel{
 
     private JButton up,down,left,right;
     private Font arrowsFont = new Font("Dialog",0,30);
 
-    public ControlArrows(){
+    private ControlArrows(){
 
         setBackground(Color.black);
         setBounds(SidePanel.xlocation,SidePanel.yLocation, ScreenSettings.elementHeight*3,ScreenSettings.elementWidth*2);

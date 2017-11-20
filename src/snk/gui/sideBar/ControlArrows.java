@@ -11,7 +11,7 @@ public class ControlArrows extends JPanel{
     private JButton up,down,left,right;
     private Font arrowsFont = new Font("Dialog",0,30);
 
-    private ControlArrows(){
+    public ControlArrows(){
 
         setBackground(Color.black);
         setBounds(SidePanel.xlocation,SidePanel.yLocation, ScreenSettings.elementHeight*3,ScreenSettings.elementWidth*2);

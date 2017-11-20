@@ -3,12 +3,14 @@
 package snk.gui.mainScreen;
 
 import snk.gui.ScreenSettings;
+import snk.gui.sideBar.SidePanel;
 
 import javax.swing.*;
 
 public class Main extends JFrame{
 
     private GameField gameField = new GameField();
+    SidePanel sidePanel = new SidePanel();
 
     public Main(){
 
@@ -22,6 +24,7 @@ public class Main extends JFrame{
         ScreenSettings.device.setFullScreenWindow(this);
 
         add(gameField);
+        add(sidePanel);
 
         setVisible(true);
 

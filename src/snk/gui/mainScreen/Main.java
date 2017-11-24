@@ -25,6 +25,8 @@ public class Main extends JFrame{
 
         add(sidePanel);
         add(gameField);
+        add(new TopFiller());
+        add(new BottomFiller());
 
         setVisible(true);
 

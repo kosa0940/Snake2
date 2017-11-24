@@ -23,7 +23,7 @@ public class SnakePart extends JPanel{
 
         Graphics2D g2 = (Graphics2D)g;
         g2.setColor(snakeColor);
-        g2.fillRect(snakeX,50, ScreenSettings.elementWidth/2,ScreenSettings.elementHeight/2);
+        g2.fillRect(snakeX,snakeY, ScreenSettings.elementWidth/2,ScreenSettings.elementHeight/2);
 
     }
 

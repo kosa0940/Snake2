@@ -16,8 +16,8 @@ public class GameField extends JPanel{
     public static int gameFieldHeight=ScreenSettings.elementHeight*8;
 
     //Location
-    private static int panelX=0;
-    private static int panelY=ScreenSettings.elementHeight/2;
+    public static int panelX=0;
+    public static int panelY=ScreenSettings.elementHeight/2;
 
     //Panels and components
     public SnakePart snakePart = new SnakePart();

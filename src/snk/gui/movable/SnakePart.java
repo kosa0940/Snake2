@@ -1,7 +1,6 @@
 package snk.gui.movable;
 
 import snk.gui.ScreenSettings;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -17,7 +16,6 @@ public class SnakePart extends JPanel{
         setLayout(null);
 
     }
-
 
     public void paint(Graphics g){
 

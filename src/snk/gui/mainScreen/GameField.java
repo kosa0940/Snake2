@@ -5,6 +5,7 @@ import snk.gui.movable.SnakePart;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class GameField extends JPanel{
 
@@ -20,15 +21,30 @@ public class GameField extends JPanel{
     public static int panelY=ScreenSettings.elementHeight/2;
 
     //Panels and components
-    public SnakePart snakePart = new SnakePart();
+    private SnakePart head = new SnakePart();
+    private SnakePart body1 = new SnakePart();
+    private SnakePart body2 = new SnakePart();
+
+    public ArrayList<SnakePart> snakeParts= new ArrayList<SnakePart>();
+
+    //Starting snake Position
+
 
     public GameField(){
 
         setLayout(null);
         setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight-9);
 
-        add(snakePart);
+        head.snakeX=ScreenSettings.elementWidth;
+        body1.snakeX=ScreenSettings.elementWidth/2;
 
+        snakeParts.add(head);
+        snakeParts.add(body1);
+        snakeParts.add(body2);
+
+        for(int i=0;i<snakeParts.size();i++) {
+            add(snakeParts.get(i));
+        }
     }
 
     public void paint(Graphics g){
@@ -40,8 +56,9 @@ public class GameField extends JPanel{
 
         g2.setColor(Color.black);
 
-        snakePart.paint(g2);
-
+        for(int i=0;i<snakeParts.size();i++) {
+        snakeParts.get(i).paint(g2);
+        }
     }
 
 }

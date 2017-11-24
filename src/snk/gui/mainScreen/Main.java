@@ -10,7 +10,7 @@ import javax.swing.*;
 public class Main extends JFrame{
 
     public GameField gameField = new GameField();
-    SidePanel sidePanel = new SidePanel();
+    public SidePanel sidePanel = new SidePanel();
 
     public Main(){
 

@@ -19,7 +19,7 @@ public class SidePanel extends JPanel implements ActionListener{
 
     //Components Declaration
     JButton start,recTab,exit;
-    ControlArrows arrows = new ControlArrows();
+    public ControlArrows arrows = new ControlArrows();
 
     //Components Localization
     private static int separation = ScreenSettings.elementHeight/2;

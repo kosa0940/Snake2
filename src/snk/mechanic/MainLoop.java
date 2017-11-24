@@ -7,27 +7,20 @@ public class MainLoop {
 
     public boolean gameRunning = true;
 
-    //moving direction
-    private boolean movingUp =false;
-    private boolean movingDown= false;
-    private boolean movingRight = true;
-    private boolean movingLeft = false;
-
-
     Main mainScreen = new Main();
 
     public MainLoop(){
         while(gameRunning==true){
-            if(movingRight) {
+            if(mainScreen.sidePanel.arrows.isMovingRight()) {
                 mainScreen.gameField.snakePart.snakeX +=ScreenSettings.elementWidth/2;
             }
-            if(movingDown){
+            if(mainScreen.sidePanel.arrows.isMovingDown()){
                 mainScreen.gameField.snakePart.snakeY+=ScreenSettings.elementHeight/2;
             }
-            if(movingLeft){
+            if(mainScreen.sidePanel.arrows.isMovingLeft()){
                 mainScreen.gameField.snakePart.snakeX-=ScreenSettings.elementWidth/2;
             }
-            if(movingUp){
+            if(mainScreen.sidePanel.arrows.isMovingUp()){
                 mainScreen.gameField.snakePart.snakeY-=ScreenSettings.elementHeight/2;
             }
             mainScreen.repaint();
@@ -36,21 +29,5 @@ public class MainLoop {
                 Thread.sleep(500);
             }catch(InterruptedException e){}
         }
-    }
-
-    public void setMovingUp(boolean movingUp) {
-        this.movingUp = movingUp;
-    }
-
-    public void setMovingDown(boolean movingDown) {
-        this.movingDown = movingDown;
-    }
-
-    public void setMovingRight(boolean movingRight) {
-        this.movingRight = movingRight;
-    }
-
-    public void setMovingLeft(boolean movingLeft) {
-        this.movingLeft = movingLeft;
     }
 }

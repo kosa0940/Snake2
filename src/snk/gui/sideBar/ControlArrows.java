@@ -57,7 +57,7 @@ public class ControlArrows extends JPanel implements ActionListener{
             Object source = evt.getSource();
                  if(source==up){
                 movingUp=true;
-                movingDown=false;
+                movingRight=false;
                 movingLeft=false;
                 movingDown=false;
             }

@@ -1,9 +1,8 @@
 package snk.gui.movable;
 
 import snk.gui.ScreenSettings;
-import snk.gui.mainScreen.GameField;
-
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Apple{
 
@@ -22,20 +21,17 @@ public class Apple{
 
     }
 
-    public void applePostitionRandomizer(SnakePart[] snakeParts){
+    public void applePostitionRandomizer(ArrayList<SnakePart> snakeParts){
 
         double applePositionX,applePositionY;
-        applePositionX = Math.random()*27;
-        applePositionY = Math.random()*17;
-        for(int i=0;i<snakeParts.length;i++){
-            if(snakeParts[i].snakeX==(int)applePositionX&&snakeParts[i].snakeY==(int)applePositionY){
+        applePositionX = 0;
+        applePositionY = 0;
+        for(int i=0;i<snakeParts.size();i++){
+            if(snakeParts.get(i).snakeX==(int)applePositionX&&snakeParts.get(i).snakeY==(int)applePositionY){
                 applePostitionRandomizer(snakeParts);
             }
         }
-
         appleXParameter=(int)applePositionX;
         appleYParameter=(int)applePositionY;
-
     }
-
 }

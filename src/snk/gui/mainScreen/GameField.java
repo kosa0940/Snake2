@@ -1,6 +1,7 @@
 package snk.gui.mainScreen;
 
 import snk.gui.ScreenSettings;
+import snk.gui.movable.Apple;
 import snk.gui.movable.SnakePart;
 
 import javax.swing.*;
@@ -25,6 +26,8 @@ public class GameField extends JPanel{
     private SnakePart body1 = new SnakePart();
     private SnakePart body2 = new SnakePart();
 
+    Apple apple = new Apple();
+
     public ArrayList<SnakePart> snakeParts= new ArrayList<SnakePart>();
 
     //Starting snake Position
@@ -35,8 +38,11 @@ public class GameField extends JPanel{
         setLayout(null);
         setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight-9);
 
-        head.snakeX=ScreenSettings.elementWidth;
         body1.snakeX=ScreenSettings.elementWidth/2;
+        head.snakeX=ScreenSettings.elementWidth;
+
+
+        apple.applePostitionRandomizer(snakeParts);
 
         snakeParts.add(head);
         snakeParts.add(body1);
@@ -45,6 +51,7 @@ public class GameField extends JPanel{
         for(int i=0;i<snakeParts.size();i++) {
             add(snakeParts.get(i));
         }
+
     }
 
     public void paint(Graphics g){
@@ -59,6 +66,7 @@ public class GameField extends JPanel{
         for(int i=0;i<snakeParts.size();i++) {
         snakeParts.get(i).paint(g2);
         }
+        apple.paint(g2);
     }
 
 }

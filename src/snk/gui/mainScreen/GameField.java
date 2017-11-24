@@ -25,7 +25,7 @@ public class GameField extends JPanel{
     public GameField(){
 
         setLayout(null);
-        setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight);
+        setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight-9);
 
         add(snakePart);
 
@@ -36,7 +36,7 @@ public class GameField extends JPanel{
         Graphics2D g2 = (Graphics2D) g;
 
         g2.setColor(backgroundColor);
-        g2.fillRect(0,0,gameFieldWidth,gameFieldHeight);
+        g2.fillRect(0,0,gameFieldWidth,gameFieldHeight-9);
 
         g2.setColor(Color.black);
 

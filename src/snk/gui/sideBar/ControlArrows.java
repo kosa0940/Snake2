@@ -55,35 +55,31 @@ public class ControlArrows extends JPanel implements ActionListener{
 
     public void actionPerformed(ActionEvent evt){
             Object source = evt.getSource();
-
-            if(source==up){
+                 if(source==up){
                 movingUp=true;
                 movingDown=false;
                 movingLeft=false;
                 movingDown=false;
             }
-            if(source==down){
+                 if(source==down){
                 movingDown=true;
                 movingUp=false;
                 movingRight=false;
                 movingLeft=false;
             }
-            if(source==left){
+                 if(source==left){
                 movingLeft=true;
                 movingUp=false;
                 movingDown=false;
                 movingRight=false;
             }
-            if(source==right){
+                 if(source==right){
                 movingRight=true;
                 movingUp=false;
                 movingDown=false;
                 movingLeft=false;
             }
-
     }
-
-
     public boolean isMovingUp() {
         return movingUp;
     }

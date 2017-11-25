@@ -31,6 +31,9 @@ public class MainLoop {
             try {
                 Thread.sleep(500);
             }catch(InterruptedException e){}
+            System.out.println(mainScreen.gameField.snakeParts.get(0).snakeX);
+            System.out.println(mainScreen.gameField.snakeParts.get(0).snakeY);
+
         }
     }
 }

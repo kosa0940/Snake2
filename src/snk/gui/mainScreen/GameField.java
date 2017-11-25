@@ -30,17 +30,13 @@ public class GameField extends JPanel{
 
     public ArrayList<SnakePart> snakeParts= new ArrayList<SnakePart>();
 
-    //Starting snake Position
-
-
     public GameField(){
 
         setLayout(null);
         setBounds(panelX,panelY,gameFieldWidth,gameFieldHeight-9);
 
-        body1.snakeX=ScreenSettings.elementWidth/2;
-        head.snakeX=ScreenSettings.elementWidth;
-
+        body1.snakeX=panelX+ScreenSettings.elementWidth;
+        head.snakeX=panelY+ScreenSettings.elementHeight;
 
         apple.applePostitionRandomizer(snakeParts);
 
@@ -66,7 +62,7 @@ public class GameField extends JPanel{
         for(int i=0;i<snakeParts.size();i++) {
         snakeParts.get(i).paint(g2);
         }
-        apple.paint(g2);
+       apple.paint(g2);
     }
 
 }
